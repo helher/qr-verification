@@ -15,8 +15,9 @@ import {
 Box
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { CheckIcon, EmailIcon, InfoIcon } from '@chakra-ui/icons'
 import './Home.css'
+import BackgroundImage from '../assets/folketinget-background-image.svg';
+
 
 
 export default function Home() {
@@ -70,7 +71,7 @@ function verifyUser() {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-            '../../img/folketinget-background-image.svg'  
+            BackgroundImage
           }
         />
       </Flex>

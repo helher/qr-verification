@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import BackgroundImage from '../assets/folketinget-background-image.svg';
+
 
 export default function Login() {
   const [voterIdInput, setVoterIdInput] = useState('')
@@ -64,7 +66,7 @@ function verifyUser() {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-            '../../img/folketinget-background-image.svg'  
+            BackgroundImage  
           }
         />
       </Flex>

@@ -30,17 +30,17 @@ function App() {
               <BrowserRouter>
       <Navbar/>
                 <Routes>
-                  <Route path="/" element={<Navigate to="qr-verification/invitation" /* Should be referencing the main screen *//>}/>
-                  <Route path="qr-verification/home" element={<Home />}/>
-                  <Route path="qr-verification/login" element={<Login />}/>
-                  <Route path="qr-verification/voting" element={<VotingScheme />}/>
-                  <Route path="qr-verification/confirmation" element={<Confirmation />}/>
-                  <Route path="qr-verification/bulletinboard" element={<BulletinBoard />}/>
-                  <Route path="qr-verification/individualresult" element={<IndividualResult />}/>
-                  <Route path="qr-verification/info" element={<Info />}/>
-                  <Route path="qr-verification/kontakt" element={<Kontakt />}/>
-                  <Route path="qr-verification/invitation" element={<Invitation />}/>
-                  <Route path="qr-verification/resultnotification" element={<ResultNotification />}/>
+                  <Route path="/" element={<Navigate to="/invitation" /* Should be referencing the main screen *//>}/>
+                  <Route path="/home" element={<Home />}/>
+                  <Route path="/login" element={<Login />}/>
+                  <Route path="/voting" element={<VotingScheme />}/>
+                  <Route path="/confirmation" element={<Confirmation />}/>
+                  <Route path="/bulletinboard" element={<BulletinBoard />}/>
+                  <Route path="/individualresult" element={<IndividualResult />}/>
+                  <Route path="/info" element={<Info />}/>
+                  <Route path="/kontakt" element={<Kontakt />}/>
+                  <Route path="/invitation" element={<Invitation />}/>
+                  <Route path="/resultnotification" element={<ResultNotification />}/>
                 </Routes>
               </BrowserRouter>
               </Context.Provider>

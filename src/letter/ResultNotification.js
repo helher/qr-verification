@@ -8,6 +8,8 @@ import {
 import { Navigate, useNavigate } from 'react-router-dom';
 import InvitationLetter from '../assets/invitation-letter.svg';
 import Logo from '../assets/Folketinget_of_Denmark.svg';
+import QRcode from '../assets/qr-code.png';
+
 
 
 // Styling
@@ -30,7 +32,7 @@ const ResultNotification = () => {
                         
          <Grid templateColumns={'1fr 1fr'} gap='2rem' bg='#F4F4F4' paddingLeft={'2rem'} paddingRight={'2rem'} paddingTop='1rem' paddingBottom='2rem' className='letter-body' marginTop={'3rem'}>
          <p>Scan din qr QR-kode for at tjekke, at din stemme er afgivet korrekt.</p>
-                <GridItem><img src='../../img/qr-code.png'/></GridItem>
+                <GridItem><img src={QRcode}/></GridItem>
             </Grid>
             <Box bg='#F4F4F4' paddingLeft={'2rem'} paddingRight={'2rem'} paddingTop='1rem' paddingBottom='2rem' className='letter-body' marginBottom={'2rem'}>
             <p>Brug denne verifikationskode:</p>
