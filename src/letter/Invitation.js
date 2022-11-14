@@ -4,7 +4,6 @@ import {
     Button
   } from '@chakra-ui/react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import InvitationLetter from '../assets/invitation-letter.svg';
 import Logo from '../assets/Folketinget_of_Denmark.svg';
 
 // Styling
