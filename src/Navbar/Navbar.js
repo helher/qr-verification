@@ -40,7 +40,7 @@ zIndex={'10'}
   padding='0.5rem'
   display='flex'
   justifyContent='center'
-  onClick={()=> navigate('/home')}
+  onClick={()=> navigate('/qr-verification/home')}
   cursor='pointer'>
     <img src={logo}/>
   </Box>
@@ -54,8 +54,8 @@ zIndex={'10'}
   justifyContent='end'
   >
    
-    <GridItem className={'active'} ><InfoIcon marginRight={'1rem'}/><Link className="link" onClick={() => {navigate('/info')}}>Info</Link></GridItem>
-    <GridItem className={'active'} ><EmailIcon marginRight={'1rem'}/><Link className="link" onClick={() => {navigate('/kontakt')}}>Kontakt</Link></GridItem>
+    <GridItem className={'active'} ><InfoIcon marginRight={'1rem'}/><Link className="link" onClick={() => {navigate('/qr-verification/info')}}>Info</Link></GridItem>
+    <GridItem className={'active'} ><EmailIcon marginRight={'1rem'}/><Link className="link" onClick={() => {navigate('/qr-verification/kontakt')}}>Kontakt</Link></GridItem>
   
 
   </Grid>

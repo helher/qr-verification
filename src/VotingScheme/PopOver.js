@@ -25,7 +25,7 @@ import { useContext } from 'react';
 
     const submitVote = () => {
       voted.setVoted(true);
-      navigate('/confirmation');
+      navigate('/qr-verification/confirmation');
     }
 
 
@@ -50,7 +50,7 @@ import { useContext } from 'react';
                 <Text marginBottom={'1.5rem'} marginTop={'1rem'} color='#1C4E81'>A. Socialdemokratiet</Text>
                 <Box display={'flex'} alignItems='top'>
                 <PopoverCloseButton className="no-button">Nej</PopoverCloseButton>
-                <Button className='button' bg={'var(--primary_blue)'} color='var(--secondary_blue)' onClick={() => navigate('/confirmation')}>Ja</Button>
+                <Button className='button' bg={'var(--primary_blue)'} color='var(--secondary_blue)' onClick={() => navigate('/qr-verification/confirmation')}>Ja</Button>
                 </Box>
               </PopoverBody>}
                 

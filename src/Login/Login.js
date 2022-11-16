@@ -47,7 +47,7 @@ function verifyUser() {
   if(userWasFound) 
   {
     console.log('successfully signed in.')
-    navigate('/voting');
+    navigate('/qr-verification/voting');
   } 
   
   else 

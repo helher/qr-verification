@@ -70,7 +70,7 @@ const BulletinBoard = () => {
             <h1>Valgresultat</h1>
             <p>Herunder ser du resultater af valget. <br/> Brug din verifikationskode til at tjekke, at din stemme er optalt korrekt.</p>
             <Box className='verfification-code' maxWidth={'40rem'} bg='var(--secondary_blue)' padding='1rem' borderRadius={'5px'} color='var(--primary_blue)' marginTop='2rem' >
-            <Text className='info-text'>Hvis den angivne stemme ikke svarer til den stemme, du faktisk har angivet, eller hvis du kan ikke finde din kode, bedes du kontakte valgstyrelsen <Link className='link-bold' onClick={()=> navigate('/kontakt')}>her</Link>.</Text>
+            <Text className='info-text'>Hvis den angivne stemme ikke svarer til den stemme, du faktisk har angivet, eller hvis du kan ikke finde din kode, bedes du kontakte valgstyrelsen <Link className='link-bold' onClick={()=> navigate('/qr-verification/kontakt')}>her</Link>.</Text>
             </Box>
 
 
@@ -81,10 +81,10 @@ const BulletinBoard = () => {
                 </div>
 
 
-        <Box id='error-text' display={'none'} maxWidth={'40rem'} bg='var(--secondary_blue)' padding='1rem' borderRadius={'5px'} color='maroon'><h3>Der kunne ikke findes nogen stemme med denne kode.</h3> <Text className='info-text'>Tjek venligst, at du har indtastet din kode korrekt. Hvis koden er korrekt, men din stemme ikke vises, skal du kontakte valgstyreren <Link className='link-bold' onClick={()=> navigate('/kontakt')}>her</Link>.</Text></Box>
+        <Box id='error-text' display={'none'} maxWidth={'40rem'} bg='var(--secondary_blue)' padding='1rem' borderRadius={'5px'} color='maroon'><h3>Der kunne ikke findes nogen stemme med denne kode.</h3> <Text className='info-text'>Tjek venligst, at du har indtastet din kode korrekt. Hvis koden er korrekt, men din stemme ikke vises, skal du kontakte valgstyreren <Link className='link-bold' onClick={()=> navigate('/qr-verification/kontakt')}>her</Link>.</Text></Box>
         <Box id='success-text' display={'none'} maxWidth={'40rem'} bg='var(--secondary_blue)' padding='1rem' borderRadius={'5px'} color='#599C2D'>
             <h3>Din stemme er optalt!</h3>
-         <Text className='info-text'>Hvis den angivne stemme ikke svarer til den stemme, du faktisk har angivet, bedes du kontakte valgstyrelsen <Link className='link-bold' onClick={()=> navigate('/kontakt')}>her</Link>.</Text>
+         <Text className='info-text'>Hvis den angivne stemme ikke svarer til den stemme, du faktisk har angivet, bedes du kontakte valgstyrelsen <Link className='link-bold' onClick={()=> navigate('/qr-verification/kontakt')}>her</Link>.</Text>
          </Box>
 
 {input.length>0 ?
@@ -116,7 +116,7 @@ const BulletinBoard = () => {
 }
 <Box display={'flex'} justifyContent='end' marginTop={'2rem'}>
 
-    <Button className='button' bg={'var(--primary_blue)'}  color='var(--secondary_blue)'  onClick={()=> navigate('/home')}>Afslut</Button>
+    <Button className='button' bg={'var(--primary_blue)'}  color='var(--secondary_blue)'  onClick={()=> navigate('/qr-verification/home')}>Afslut</Button>
 </Box>
         </div>
         </div>

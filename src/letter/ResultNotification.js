@@ -36,11 +36,11 @@ const ResultNotification = () => {
             <Box bg='#F4F4F4' paddingLeft={'2rem'} paddingRight={'2rem'} paddingTop='1rem' paddingBottom='2rem' className='letter-body' marginBottom={'2rem'}>
             <p>Brug denne verifikationskode:</p>
                 <p className='bold'>CWTL-DMDpLZDSvR</p>
-                <p>til at tjekke, at din stemme er afgivet korrekt på resultatlisten. Klik på følgende link:<span> <a className='link-bold' onClick={()=> navigate('/bulletinboard')}> Se resultatet</a></span>.</p>
+                <p>til at tjekke, at din stemme er afgivet korrekt på resultatlisten. Klik på følgende link:<span> <a className='link-bold' onClick={()=> navigate('/qr-verification/bulletinboard')}> Se resultatet</a></span>.</p>
             </Box>
 
 
-                            <p>Har du brug for hjælp?<span> <a className='link' onClick={()=> navigate('/kontakt')}> Klik her</a></span>.</p>
+                            <p>Har du brug for hjælp?<span> <a className='link' onClick={()=> navigate('/qr-verification/kontakt')}> Klik her</a></span>.</p>
                             </div>
 
                     <div className='letter-margin'>

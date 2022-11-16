@@ -52,7 +52,7 @@ function verifyUser() {
   if(userWasFound) 
   {
     console.log('successfully signed in.')
-    navigate('/verificationcode');
+    navigate('/qr-verification/verificationcode');
   } 
   
   else 
@@ -107,10 +107,10 @@ function verifyUser() {
                   >
 
             
-               <GridItem gridColumn={'1 / 3'} bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/login')}>
+               <GridItem gridColumn={'1 / 3'} bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/qr-verification/login')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">login</span><p>Log ind for at stemme</p></Box></Link></GridItem> 
             
-                <GridItem gridColumn={'1 / 3'} bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/bulletinboard')}>
+                <GridItem gridColumn={'1 / 3'} bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/qr-verification/bulletinboard')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">ballot</span><p>Tjek om din stemme er optalt korrekt</p></Box></Link></GridItem>
             
                {/* <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem'>
@@ -122,10 +122,10 @@ function verifyUser() {
                 <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem'>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><EmailIcon fontSize={'3.5rem'}/><p>Kandidater</p></Box></Link></GridItem> */}
             
-            <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/kontakt')}>
+            <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/qr-verification/kontakt')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">mail</span><p>Kontakt</p></Box></Link></GridItem>
 
-            <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/kontakt')}>
+            <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/qr-verification/kontakt')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">info</span><p>Info</p></Box></Link></GridItem>
             
          </Grid>
