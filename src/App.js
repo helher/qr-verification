@@ -31,7 +31,7 @@ function App() {
       <Navbar/>
                 <Routes>
                   <Route path="/" element={<Navigate to="qr-verification/invitation" /* Should be referencing the main screen *//>}/>
-                  <Route path="/qr-verification/" element={<Navigate to="qr-verification/invitation" /* Should be referencing the main screen *//>}/>
+                  <Route path="/qr-verification/invitation" element={<Invitation/>}/>
                   <Route path="/qr-verification/home" element={<Home />}/>
                   <Route path="/qr-verification/login" element={<Login />}/>
                   <Route path="/qr-verification/voting" element={<VotingScheme />}/>
