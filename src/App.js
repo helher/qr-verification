@@ -27,21 +27,21 @@ function App() {
 
         <Context.Provider value={{voted, setVoted}}>
 
-              <BrowserRouter /* basename='/qr-verification' */>
+              <BrowserRouter basename='/qr-verification'>
       <Navbar/>
                 <Routes>
-                  <Route path="/" element={<Navigate to="qr-verification/invitation" /* Should be referencing the main screen *//>}/>
-                  <Route path="/qr-verification/invitation" element={<Invitation/>}/>
-                  <Route path="/qr-verification/home" element={<Home />}/>
-                  <Route path="/qr-verification/login" element={<Login />}/>
-                  <Route path="/qr-verification/voting" element={<VotingScheme />}/>
-                  <Route path="/qr-verification/confirmation" element={<Confirmation />}/>
-                  <Route path="/qr-verification/bulletinboard" element={<BulletinBoard />}/>
-                  <Route path="/qr-verification/individualresult" element={<IndividualResult />}/>
-                  <Route path="/qr-verification/info" element={<Info />}/>
-                  <Route path="/qr-verification/kontakt" element={<Kontakt />}/>
-                  <Route path="/qr-verification/invitation" element={<Invitation />}/>
-                  <Route path="/qr-verification/resultnotification" element={<ResultNotification />}/>
+                  <Route exact path="/" element={<Navigate to="qr-verification/individualresult" /* Should be referencing the main screen *//>}/>
+                  <Route exact path="/qr-verification/invitation" element={<Invitation/>}/>
+                  <Route exact path="/qr-verification/home" element={<Home />}/>
+                  <Route exact path="/qr-verification/login" element={<Login />}/>
+                  <Route exact path="/qr-verification/voting" element={<VotingScheme />}/>
+                  <Route exact path="/qr-verification/confirmation" element={<Confirmation />}/>
+                  <Route exact path="/qr-verification/bulletinboard" element={<BulletinBoard />}/>
+                  <Route exact path="/qr-verification/individualresult" element={<IndividualResult />}/>
+                  <Route exact path="/qr-verification/info" element={<Info />}/>
+                  <Route exact path="/qr-verification/kontakt" element={<Kontakt />}/>
+                  <Route exact path="/qr-verification/invitation" element={<Invitation />}/>
+                  <Route exact path="/qr-verification/resultnotification" element={<ResultNotification />}/>
                 </Routes>
               </BrowserRouter>
               </Context.Provider>
