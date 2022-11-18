@@ -17,7 +17,7 @@ function Navbar() {
   const voted = useContext(Context);
 
     return (
-  <div>{!['/qr-verification/login', '/qr-verification', '/qr-verification/home', '/qr-verification/invitation', '/qr-verification/resultnotification'].includes(pathname) && 
+  <div>{!['/qr-verification/qr-verification/login', '/qr-verification', '/qr-verification/qr-verification/home', '/qr-verification/invitation', '/qr-verification/resultnotification'].includes(pathname) && 
 <Box
 w='100vw'
 h='10vh'
