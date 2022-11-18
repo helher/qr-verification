@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/qr-verification/static/css/main.9b96f500.css",
-    "main.js": "/qr-verification/static/js/main.27e223ce.js",
+    "main.js": "/qr-verification/static/js/main.aad9a077.js",
     "static/media/folketinget-background-image.svg": "/qr-verification/static/media/folketinget-background-image.f1ed5f0268989be1acb35e45c1ac9c9c.svg",
     "static/media/logo-folketinget.svg": "/qr-verification/static/media/logo-folketinget.7f8d7b9f2e5d5adb7310690f9695bb73.svg",
     "static/media/Folketinget_of_Denmark.svg": "/qr-verification/static/media/Folketinget_of_Denmark.15fbca19cc7c7bcd7ec579909a1768f5.svg",
     "index.html": "/qr-verification/index.html",
     "main.9b96f500.css.map": "/qr-verification/static/css/main.9b96f500.css.map",
-    "main.27e223ce.js.map": "/qr-verification/static/js/main.27e223ce.js.map"
+    "main.aad9a077.js.map": "/qr-verification/static/js/main.aad9a077.js.map"
   },
   "entrypoints": [
     "static/css/main.9b96f500.css",
-    "static/js/main.27e223ce.js"
+    "static/js/main.aad9a077.js"
   ]
 }
