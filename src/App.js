@@ -27,7 +27,7 @@ function App() {
 
         <Context.Provider value={{voted, setVoted}}>
 
-              <BrowserRouter basename='/qr-verification'>
+              <BrowserRouter /* basename='/qr-verification' */>
       <Navbar/>
                 <Routes>
                   <Route path="/" element={<Navigate to="qr-verification/invitation" /* Should be referencing the main screen *//>}/>
