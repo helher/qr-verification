@@ -143,7 +143,7 @@ const BulletinBoard = () => {
 }
 
 
-    <Button className='button' bg={'var(--primary_blue)'}  color='var(--secondary_blue)' width={'100%'} marginTop='3rem' onClick={()=> navigate('/qr-verification/home')}>Afslut</Button>
+    <Button className='button' bg={'var(--primary_blue)'}  color='var(--secondary_blue)' width={'100%'} marginTop='3rem' onClick={()=> navigate('/login')}>Afslut</Button>
         </div>
         </div>
     );

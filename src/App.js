@@ -27,21 +27,21 @@ function App() {
 
         <Context.Provider value={{voted, setVoted}}>
 
-              <BrowserRouter basename='/qr-verification'>
+              <BrowserRouter >
       <Navbar/>
                 <Routes>
-                  <Route exact path="/" element={<Navigate to="qr-verification/individualresult" /* Should be referencing the main screen *//>}/>
-                  <Route exact path="/qr-verification/invitation" element={<Invitation/>}/>
-                  <Route exact path="/qr-verification/home" element={<Home />}/>
-                  <Route exact path="/qr-verification/login" element={<Login />}/>
-                  <Route exact path="/qr-verification/voting" element={<VotingScheme />}/>
-                  <Route exact path="/qr-verification/confirmation" element={<Confirmation />}/>
-                  <Route exact path="/qr-verification/bulletinboard" element={<BulletinBoard />}/>
-                  <Route exact path="/qr-verification/individualresult" element={<IndividualResult />}/>
-                  <Route exact path="/qr-verification/info" element={<Info />}/>
-                  <Route exact path="/qr-verification/kontakt" element={<Kontakt />}/>
-                  <Route exact path="/qr-verification/invitation" element={<Invitation />}/>
-                  <Route exact path="/qr-verification/resultnotification" element={<ResultNotification />}/>
+                  <Route exact path="/" element={<Navigate to="/individualresult" /* Should be referencing the main screen *//>}/>
+                  <Route exact path="/invitation" element={<Invitation/>}/>
+                  <Route exact path="/home" element={<Home />}/>
+                  <Route exact path="/login" element={<Login />}/>
+                  <Route exact path="/voting" element={<VotingScheme />}/>
+                  <Route exact path="/confirmation" element={<Confirmation />}/>
+                  <Route exact path="/bulletinboard" element={<BulletinBoard />}/>
+                  <Route exact path="/individualresult" element={<IndividualResult />}/>
+                  <Route exact path="/info" element={<Info />}/>
+                  <Route exact path="/kontakt" element={<Kontakt />}/>
+                  <Route exact path="/invitation" element={<Invitation />}/>
+                  <Route exact path="/resultnotification" element={<ResultNotification />}/>
                 </Routes>
               </BrowserRouter>
               </Context.Provider>

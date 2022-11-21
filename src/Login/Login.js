@@ -47,7 +47,7 @@ function verifyUser() {
   if(userWasFound) 
   {
     console.log('successfully signed in.')
-    navigate('/qr-verification/voting');
+    navigate('/voting');
   } 
   
   else 
@@ -97,6 +97,7 @@ function verifyUser() {
               marginTop='1rem'
             >CPR-nummer</FormLabel>
             <Input 
+              autocomplete="off"
               type="text" 
               placeholder='Indtast CPR-nummer' 
               value={voterIdInput} 
