@@ -22,7 +22,7 @@ const IndividualResult = () => {
           paddingTop='3rem' marginTop='2rem' paddingBottom='3rem' 
           border='solid 1px #D9D9D9' paddingLeft={'1rem'} paddingRight={'0.5rem'} 
           justifyItems='center' display={'flex'} justifyContent={'center'}>
-            <p >A. Socialdemokratiet</p>
+            <p >Pia Olsen Dyhr</p>
         </Box>
         <Box className='intro-text' marginTop={'1rem'} marginBottom={'1rem'}>
         <p>Såfremt du ønsker at se hele resultatlisten, klik <Link className='link-bold' onClick={()=> navigate('/bulletinboard')}>her</Link>.</p>
