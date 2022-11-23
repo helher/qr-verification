@@ -30,7 +30,7 @@ function App() {
               <BrowserRouter >
       <Navbar/>
                 <Routes>
-                  <Route exact path="/" element={<Navigate to="/individualresult" /* Should be referencing the main screen *//>}/>
+                  <Route exact path="/qr-verification" element={<Navigate to="/individualresult" /* Should be referencing the main screen *//>}/>
                   <Route exact path="/invitation" element={<Invitation/>}/>
                   <Route exact path="/home" element={<Home />}/>
                   <Route exact path="/login" element={<Login />}/>
