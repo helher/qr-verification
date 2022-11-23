@@ -74,10 +74,10 @@ export default function Login() {
     // This doens't show in console
   const handleSubmit = (e) => {
     //actions.setSubmitting(false)
+    console.log("goes to voting")
     e.preventDefault()
     navigate ('/voting')
-    console.log("goes to voting")
-}
+  }
 
 
   return (
