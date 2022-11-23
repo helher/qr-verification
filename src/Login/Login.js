@@ -23,6 +23,7 @@ export default function Login() {
   const [voterPasswordInput, setVoterPasswordInput] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
+
   const handleChangeCPRInput = (e) => {
     setVoterCPRInput(e.target.value);
     console.log(voterCPRInput)
@@ -35,68 +36,50 @@ export default function Login() {
 
   const navigate = useNavigate();
 
+  //This shows in console
   function validateCPR(value) {
 
     let error = "";
 
     if (!value) {
       error = "Du bedes venligst indtaste din CPR-nummer";
+      //console.log("tomt")
     } 
+    if (value !== "010203-0405"){
+      error = "Indtastet CPR-nummer er forkert. Indtast venligst igen: 010203-0405. Husk bindestregen."
+      //console.log("forkert nummer")
+    }
+    if (value !== "0102030405"){
+      error = "Indtastet CPR-nummer er forkert. Indtast venligst igen: 010203-0405."
+      //console.log("forkert nummer")
+    }
+
     return error;
   }
 
+  // This doens't show in console
   function validatePassword(value) {
-
     let error = "";
 
     if (!value) {
       error = "Du bedes venligst indtaste din stemme-nøgle";
     } 
+    if (value !== "test123" || "test 123"){
+      error = "Indtastet kodeord er forkert. Prøv igen."
+    }
+
     return error;
   }
 
-  function handleSubmit() {
-   if (voterCPRInput !== '010203-0405' || voterCPRInput !== '0102030405' || voterPasswordInput !== 'test123') {
-      setErrorMessage("Ugyldigt CPR-nummer eller stemme-nøgle.");
-  }
+    // This doens't show in console
+  const handleSubmit = (e) => {
+    //actions.setSubmitting(false)
+    e.preventDefault()
+    navigate ('/voting')
+    console.log("goes to voting")
 }
 
 
-  /* const validLogins = [ // for temporary testing purposes
-  {
-    voterID: '010203-0405', // corresponds to "Stemme-ID"
-    voterKey: 'test123', // correponds to Stemme-nøgle
-  },
-  {
-    voterID: '060708-0910', // corresponds to "Stemme-ID"
-    voterKey: 'test123' // correponds to Stemme-nøgle
-  }
-] */
-
-/* function verifyUser() {
-  let userWasFound = false;
-
-  for(let i = 0; i < validLogins.length; i++) 
-  {
-    if(voterIdInput === validLogins[i].voterID) 
-    {
-      userWasFound = true;
-      
-    }
-  }
-
-  if(userWasFound) 
-  {
-    console.log('successfully signed in.')
-    navigate('/voting');
-  } 
-  
-  else 
-  {
-    console.log('the credentials that was entered do not match any user.')
-  }
-}
- */
   return (
     <Stack 
       minH={'100vh'} 
@@ -132,14 +115,14 @@ export default function Login() {
             For at stemme til folketingsvalget online, bedes du logge ind med de informationer, du har modtaget med posten.
           </Text>
           <Formik initialValues={{ cprnummer: "",
-                                    password: ""
+                                    password: "" 
                                      }} onSubmit={handleSubmit}>
               {(props) => (
                 <Form className="input-field">
                    <Field
+                    name="cprnummer"
                     validate={validateCPR}
                     onChange={handleChangeCPRInput}
-                    name="cprnummer"
                   >
                     {({ field, form }) => (
                       <FormControl
@@ -189,7 +172,7 @@ export default function Login() {
                       </FormControl>
                     )}
                   </Field>
-                  <div>{errorMessage}</div>
+                  <div>{errorMessage}</div> 
             <Button  
             id='login'
             isLoading={props.isSubmitting}
@@ -202,7 +185,7 @@ export default function Login() {
               className='button'
               marginTop={'2rem'}
               >
-              Sign in
+              Log ind 
             </Button>
           </Form>
            )}
