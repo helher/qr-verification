@@ -10,6 +10,7 @@ import {
   Stack,
   Image,
   Text,
+  Box
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
@@ -19,12 +20,12 @@ import { Field, Form, Formik } from "formik";
 
 
 export default function Login() {
-  const [voterCPRInput, setVoterCPRInput] = useState('')
-  const [voterPasswordInput, setVoterPasswordInput] = useState('')
+  /* const [voterCPRInput, setVoterCPRInput] = useState('')
+  const [voterPasswordInput, setVoterPasswordInput] = useState('') */
   const [errorMessage, setErrorMessage] = useState('')
 
 
-  const handleChangeCPRInput = (e) => {
+ /*  const handleChangeCPRInput = (e) => {
     setVoterCPRInput(e.target.value);
     console.log(voterCPRInput)
   };
@@ -32,7 +33,7 @@ export default function Login() {
     setVoterPasswordInput(e.target.value);
     console.log(voterPasswordInput)
 
-  };
+  }; */
 
   const navigate = useNavigate();
 
@@ -43,17 +44,7 @@ export default function Login() {
 
     if (!value) {
       error = "Du bedes venligst indtaste din CPR-nummer";
-      //console.log("tomt")
     } 
-    if (value !== "010203-0405"){
-      error = "Indtastet CPR-nummer er forkert. Indtast venligst igen: 010203-0405. Husk bindestregen."
-      //console.log("forkert nummer")
-    }
-    if (value !== "0102030405"){
-      error = "Indtastet CPR-nummer er forkert. Indtast venligst igen: 010203-0405."
-      //console.log("forkert nummer")
-    }
-
     return error;
   }
 
@@ -64,19 +55,20 @@ export default function Login() {
     if (!value) {
       error = "Du bedes venligst indtaste din stemme-nøgle";
     } 
-    if (value !== "test123" || "test 123"){
-      error = "Indtastet kodeord er forkert. Prøv igen."
-    }
 
     return error;
   }
 
     // This doens't show in console
-  const handleSubmit = (e) => {
-    //actions.setSubmitting(false)
+  const handleSubmit = (values, actions) => {
+    actions.setSubmitting(false)
     console.log("goes to voting")
-    e.preventDefault()
+    if (values.password !== "test123" || (values.cprnummer !== "010203-0405" && values.cprnummer !== "0102030405")){
+      setErrorMessage("Indtastet CPR-nummer eller stemme-nøgle er forkert. Prøv igen.");
+    }
+    else{
     navigate ('/voting')
+    }
   }
 
 
@@ -122,11 +114,10 @@ export default function Login() {
                    <Field
                     name="cprnummer"
                     validate={validateCPR}
-                    onChange={handleChangeCPRInput}
                   >
                     {({ field, form }) => (
                       <FormControl
-                        isInvalid={form.errors.name && form.touched.name}
+                        isInvalid={form.errors.cprnummer && form.touched.cprnummer}
                       >
                         <FormLabel color={"#1C4E81"} marginTop='1rem'
                       >CPR-nummer</FormLabel>
@@ -141,7 +132,7 @@ export default function Login() {
                           color={'#1C4E81'} 
                           {...field}
                         />
-                        <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                        <FormErrorMessage>{form.errors.cprnummer}</FormErrorMessage>
                       </FormControl>
                     )}
                   </Field>
@@ -149,11 +140,10 @@ export default function Login() {
                   <Field
                     name="password"
                     validate={validatePassword}
-                    onChange={handleChangePasswordInput}
                   >
                     {({ field, form }) => (
                       <FormControl
-                        isInvalid={form.errors.name && form.touched.name}
+                        isInvalid={form.errors.password && form.touched.password}
                       >
                         <FormLabel color={"#1C4E81"} marginTop='1rem'
                         >Stemme-nøgle</FormLabel>
@@ -168,11 +158,11 @@ export default function Login() {
                           color={'#1C4E81'} 
                           {...field}
                         />
-                        <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                        <FormErrorMessage>{form.errors.password}</FormErrorMessage>
                       </FormControl>
                     )}
                   </Field>
-                  <div>{errorMessage}</div> 
+                  <Box color='#ff0000' marginTop={'1rem'}>{errorMessage}</Box> 
             <Button  
             id='login'
             isLoading={props.isSubmitting}
