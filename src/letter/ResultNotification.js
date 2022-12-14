@@ -1,10 +1,8 @@
 import React from "react";
-import { Box, Button, Grid, GridItem } from "@chakra-ui/react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Folketinget_of_Denmark.svg";
 import QRcode from "../assets/qr-code.png";
-
-// Styling
 import "./Letter.css";
 
 const ResultNotification = () => {
@@ -21,12 +19,12 @@ const ResultNotification = () => {
             Resultatet af folketingsvalget 2022
           </h2>
           <div className="letter-body">
-            <p>
-              Resultatet af folketingsvalget er nu offentliggjort. 
-            </p>
+            <p>Resultatet af folketingsvalget er nu offentliggjort.</p>
 
             <p>
-              Det er vigtigt, at du tjekker, at din stemme er afgivet korrekt. Dette gør du ved enten at scanne QR-koden i boks 1, eller ved at klikke på linket i boks 2 og se din verifikationskode.
+              Det er vigtigt, at du tjekker, at din stemme er afgivet korrekt.
+              Dette gør du ved enten at scanne QR-koden i boks 1, eller ved at
+              klikke på linket i boks 2 og se din verifikationskode.
             </p>
 
             <Grid
@@ -41,16 +39,17 @@ const ResultNotification = () => {
               className="letter-body"
               marginTop={"3rem"}
             >
-                <GridItem gridColumn={'1/3'}>
-                <p><b>Boks 1</b></p>
-              
-                    </GridItem>
-                    <GridItem>
-                    <p>
-                Scan din QR-kode for at tjekke, at din stemme er afgivet
-                korrekt.
-              </p>
-                    </GridItem>
+              <GridItem gridColumn={"1/3"}>
+                <p>
+                  <b>Boks 1</b>
+                </p>
+              </GridItem>
+              <GridItem>
+                <p>
+                  Scan din QR-kode for at tjekke, at din stemme er afgivet
+                  korrekt.
+                </p>
+              </GridItem>
               <GridItem>
                 <img src={QRcode} />
               </GridItem>
@@ -64,7 +63,9 @@ const ResultNotification = () => {
               className="letter-body"
               marginBottom={"2rem"}
             >
-              <p><b>Boks 2</b></p>
+              <p>
+                <b>Boks 2</b>
+              </p>
               <p>Brug denne verifikationskode:</p>
               <p className="bold">CWTL-DMDpLZDSvR</p>
               <p>

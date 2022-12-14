@@ -2,26 +2,20 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  PopoverHeader,
   PopoverBody,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
   Button,
   Text,
   Box,
 } from "@chakra-ui/react";
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./VotingScheme.css";
-import { Context } from "../Context";
 
 function PopOver(value) {
   const navigate = useNavigate();
-  const voted = useContext(Context);
 
   const submitVote = () => {
-    voted.setVoted(true);
     navigate("/confirmation");
   };
 
