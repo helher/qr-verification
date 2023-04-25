@@ -15,13 +15,13 @@ import {
 Box
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { CheckIcon, EmailIcon, InfoIcon } from '@chakra-ui/icons'
 import './Home.css'
+import BackgroundImage from '../assets/folketinget-background-image.svg';
+
 
 
 export default function Home() {
   const [voterIdInput, setVoterIdInput] = useState('')
-  const handleVoterIdInputChange = (e) => setVoterIdInput(e.target.value)
 
   const navigate = useNavigate();
 
@@ -70,7 +70,7 @@ function verifyUser() {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-            '../../img/folketinget-background-image.svg'  
+            BackgroundImage
           }
         />
       </Flex>
@@ -91,9 +91,7 @@ function verifyUser() {
             fontSize={'xl'}>Velkommen til det digitale folketingsvalg.
           </Heading>
           
-          <Text
-            color={'#1C4E81'}  
-          >
+          <Text>
             For at stemme til folketingsvalget online, bedes du logge ind med de informationer, du har modtaget med posten.
           </Text>
          <Grid
@@ -111,15 +109,6 @@ function verifyUser() {
             
                 <GridItem gridColumn={'1 / 3'} bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/bulletinboard')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">ballot</span><p>Tjek om din stemme er optalt korrekt</p></Box></Link></GridItem>
-            
-               {/* <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem'>
-                <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">groups</span><p>Partier</p></Box></Link></GridItem>
-            
-                <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem'>
-                <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><EmailIcon fontSize={'3.5rem'}/><p>Valgkredse</p></Box></Link></GridItem>
-            
-                <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem'>
-                <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><EmailIcon fontSize={'3.5rem'}/><p>Kandidater</p></Box></Link></GridItem> */}
             
             <GridItem bg={'var(--secondary_blue)'} h='7rem' borderRadius={'5px'}><Link padding={'1rem'} display='flex' _hover={{color: 'var(--secondary_darkblue)'}} height='5rem' onClick={() => navigate('/kontakt')}>
                 <Box w='100%' display={'flex'} flexDirection='column' alignItems={'center'}><span class="material-symbols-outlined">mail</span><p>Kontakt</p></Box></Link></GridItem>

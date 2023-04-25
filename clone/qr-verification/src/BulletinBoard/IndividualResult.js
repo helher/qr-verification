@@ -1,11 +1,7 @@
-import { Grid, GridItem, Input, Box, IconButton, Text, Link, InputGroup, InputLeftElement, Accordion, AccordionButton, AccordionPanel, AccordionIcon, AccordionItem } from '@chakra-ui/react';
+import { GridItem, Box, Text, Link } from '@chakra-ui/react';
 import React from 'react';
-import ResultsAccordion from '../results-accordion.json'
-import Results from '../results.json'
 import './BulletinBoard.css'
-import { SearchIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
-import {useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -35,7 +31,7 @@ const IndividualResult = () => {
         <p className='bold'>CWTL-DMDpLZDSvR</p>
 
 < GridItem className='btn-container-vertical'>
-<Button className='button' width='100%' bg={'var(--primary_blue)'}  color='var(--secondary_blue)'  onClick={()=> navigate('/home')} fontSize='0.9rem' marginTop={'2rem'}>Afslut</Button>
+<Button className='button' width='100%' bg={'var(--primary_blue)'}  color='var(--secondary_blue)'  onClick={()=> navigate('/login')} fontSize='0.9rem' marginTop={'2rem'}>Afslut</Button>
         </GridItem>
         </div>
         </div>

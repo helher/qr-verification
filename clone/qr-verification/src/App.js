@@ -27,20 +27,21 @@ function App() {
 
         <Context.Provider value={{voted, setVoted}}>
 
-              <BrowserRouter>
+              <BrowserRouter >
       <Navbar/>
                 <Routes>
-                  <Route path="/" element={<Navigate to="/invitation" /* Should be referencing the main screen *//>}/>
-                  <Route path="/home" element={<Home />}/>
-                  <Route path="/login" element={<Login />}/>
-                  <Route path="/voting" element={<VotingScheme />}/>
-                  <Route path="/confirmation" element={<Confirmation />}/>
-                  <Route path="/bulletinboard" element={<BulletinBoard />}/>
-                  <Route path="/individualresult" element={<IndividualResult />}/>
-                  <Route path="/info" element={<Info />}/>
-                  <Route path="/kontakt" element={<Kontakt />}/>
-                  <Route path="/invitation" element={<Invitation />}/>
-                  <Route path="/resultnotification" element={<ResultNotification />}/>
+                  <Route exact path="/" element={<Navigate to="/individualresult" /* Should be referencing the main screen *//>}/>
+                  <Route exact path="/invitation" element={<Invitation/>}/>
+                  <Route exact path="/home" element={<Home />}/>
+                  <Route exact path="/login" element={<Login />}/>
+                  <Route exact path="/voting" element={<VotingScheme />}/>
+                  <Route exact path="/confirmation" element={<Confirmation />}/>
+                  <Route exact path="/bulletinboard" element={<BulletinBoard />}/>
+                  <Route exact path="/individualresult" element={<IndividualResult />}/>
+                  <Route exact path="/info" element={<Info />}/>
+                  <Route exact path="/kontakt" element={<Kontakt />}/>
+                  <Route exact path="/invitation" element={<Invitation />}/>
+                  <Route exact path="/resultnotification" element={<ResultNotification />}/>
                 </Routes>
               </BrowserRouter>
               </Context.Provider>

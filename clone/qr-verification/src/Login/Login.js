@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import BackgroundImage from '../assets/folketinget-background-image.svg';
 
 
 export default function Login() {
@@ -65,7 +66,7 @@ function verifyUser() {
           alt={'Login Image'}
           objectFit={'cover'}
           src={
-            '../../img/folketinget-background-image.svg'  
+            BackgroundImage  
           }
         />
       </Flex>
@@ -86,9 +87,7 @@ function verifyUser() {
             fontSize={'xl'}>Velkommen til det digitale folketingsvalg.
           </Heading>
           
-          <Text
-            color={'#1C4E81'}  
-          >
+          <Text>
             For at stemme til folketingsvalget online, bedes du logge ind med de informationer, du har modtaget med posten.
           </Text>
           <form onSubmit={verifyUser}>
@@ -98,6 +97,7 @@ function verifyUser() {
               marginTop='1rem'
             >CPR-nummer</FormLabel>
             <Input 
+              autocomplete="off"
               type="text" 
               placeholder='Indtast CPR-nummer' 
               value={voterIdInput} 
